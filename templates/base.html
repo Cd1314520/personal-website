@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Qizan Dong (Chris) &mdash;Electrical Engineering student at the University of Houston. Portfolio showcasing projects in Arduino, Python, AI Agents, and web development.">
+    <meta name="keywords" content="Qizan Dong, Qizan Dong (Chris), Electrical Engineering, Arduino, Python, MATLAB, AI Agents, Claude Code, Portfolio, University of Houston">
+    <meta name="author" content="Qizan Dong">
+    <title>{% block title %}Qizan Dong (Chris) | Portfolio{% endblock %}</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo" aria-label="Qizan Dong (Chris) Home">
+                <span class="logo-bracket">&lt;</span>CD<span class="logo-bracket"> /&gt;</span>
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="/" class="nav-link {% if active_page == 'home' %}active{% endif %}" id="nav-home">Home</a>
+                <a href="/about" class="nav-link {% if active_page == 'about' %}active{% endif %}" id="nav-about">About</a>
+                <a href="/portfolio" class="nav-link {% if active_page == 'portfolio' %}active{% endif %}" id="nav-portfolio">Portfolio</a>
+                <a href="/resume" class="nav-link {% if active_page == 'resume' %}active{% endif %}" id="nav-resume">Resume</a>
+                <a href="/contact" class="nav-link {% if active_page == 'contact' %}active{% endif %}" id="nav-contact">Contact</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>CD<span class="logo-bracket"> /&gt;</span>
+                </div>
+                <p class="footer-text">Designed &amp; Built by Qizan Dong (Chris)</p>
+                <div class="footer-links">
+                    <a href="https://github.com/cd1314520" target="_blank" rel="noopener" class="footer-link" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    </a>
+                    <a href="https://linkedin.com/in/chrisdong0425" target="_blank" rel="noopener" class="footer-link" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                    <a href="mailto:dongqizan@gmail.com" class="footer-link" aria-label="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </a>
+                </div>
+                <p class="footer-copyright">&copy; 2026 Qizan Dong. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Image Modal (Lightbox) -->
+    <div class="image-modal" id="image-modal">
+        <span class="image-modal-close" id="image-modal-close">&times;</span>
+        <img class="image-modal-content" id="image-modal-img" alt="Enlarged preview">
+    </div>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block extra_scripts %}{% endblock %}
+</body>
+</html>

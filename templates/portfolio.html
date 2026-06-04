@@ -1,0 +1,175 @@
+{% extends "base.html" %}
+
+{% block title %}Portfolio | Qizan Dong (Chris){% endblock %}
+
+{% block content %}
+<section class="section" id="portfolio">
+    <div class="container">
+
+        <!-- Section Header -->
+        <div class="section-header fade-in">
+            <span class="section-label">// Portfolio</span>
+            <h1 class="section-title">My <span class="gradient-text">Projects</span></h1>
+            <p class="section-subtitle">A collection of things I've built, am building, and plan to build.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="portfolio-filters fade-in">
+            <button class="filter-btn active" data-filter="all" id="filter-all">All</button>
+            <button class="filter-btn" data-filter="hardware" id="filter-hardware">Hardware</button>
+            <button class="filter-btn" data-filter="software" id="filter-software">Software</button>
+            <button class="filter-btn" data-filter="web" id="filter-web">Web</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="portfolio-grid">
+
+            <!-- Project 1: Robotic Arm -->
+            <div class="project-card fade-in" data-category="hardware" id="project-robotic-arm">
+                <div class="project-image">
+                    <div class="project-image-placeholder">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
+                        </svg>
+                        <span>Project Image Coming Soon</span>
+                    </div>
+                    <span class="project-status status-in-progress"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>In Progress</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Robotic Arm</h3>
+                    <p class="project-description">
+                        A programmable robotic arm built with Arduino and Python, featuring 3D-printed components,
+                        360-degree movement capabilities, and app-based control.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Arduino</span>
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">3D Printing</span>
+                        <span class="project-tag">CAD</span>
+                    </div>
+                    <div class="read-more-content">
+                        <p class="project-description">Combining embedded systems, mechanical design, and software to create a fully functional robotic platform.</p>
+                    </div>
+                    <button class="read-more-btn">Read More &darr;</button>
+                </div>
+            </div>
+
+            <!-- Project 2: Personal Portfolio Website -->
+            <div class="project-card fade-in" data-category="web" id="project-portfolio">
+                <div class="project-image">
+                    <div class="project-image-placeholder">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6" />
+                            <polyline points="8 6 2 12 8 18" />
+                        </svg>
+                        <span>Project Image Coming Soon</span>
+                    </div>
+                    <span class="project-status status-live"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Live</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Personal Portfolio Website</h3>
+                    <p class="project-description">
+                        This website! A custom-built portfolio using Flask as the backend, deployed on Vercel
+                        as a serverless application.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Flask</span>
+                        <span class="project-tag">Vercel</span>
+                        <span class="project-tag">HTML/CSS</span>
+                    </div>
+                    <div class="read-more-content">
+                        <p class="project-description">Features a responsive dark theme with modern CSS animations, glassmorphic design elements, and an interactive contact form.</p>
+                    </div>
+                    <button class="read-more-btn">Read More &darr;</button>
+                </div>
+            </div>
+
+            <!-- Project 3: Obsidian AI Workflow -->
+            <div class="project-card fade-in" data-category="software" id="project-obsidian-ai">
+                <div class="project-image">
+                    <img src="{{ url_for('static', filename='img/obsidian-graph.png') }}" alt="Obsidian Knowledge Graph" title="Click to enlarge" style="width: 100%; height: 100%; object-fit: cover; object-position: center; cursor: pointer; transition: 0.3s;" onclick="document.getElementById('image-modal').style.display='block'; document.getElementById('image-modal-img').src=this.src;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                    <span class="project-status status-completed"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Complete</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Obsidian AI Workflow &amp; Knowledge Management System</h3>
+                    <p class="project-description">
+                        Built a custom AI-powered knowledge management system that connects multiple AI agents to my
+                        local Obsidian vault for enhanced research and project organization.
+                    </p>
+
+                    <div class="project-tags">
+                        <span class="project-tag">Gemini CLI</span>
+                        <span class="project-tag">Obsidian</span>
+                        <span class="project-tag">NotebookLM</span>
+                        <span class="project-tag">Markdown</span>
+                        <span class="project-tag">Custom DB Schema</span>
+                    </div>
+
+                    <div class="read-more-content">
+                        <h4 style="font-size: 0.95rem; font-weight: 600; margin-top: 16px; margin-bottom: 8px;">Workflow Architecture</h4>
+                        <ul style="font-size: 0.85rem; color: var(--text-secondary); padding-left: 20px; margin-bottom: 16px; line-height: 1.6; list-style-type: disc;">
+                            <li>Terminal connects to Gemini CLI for direct AI agent interaction</li>
+                            <li>Local Markdown files organized around my robotic arm project, finance journaling, and technical research</li>
+                            <li>NotebookLM processes and structures information from various sources (research papers, guides, component specs)</li>
+                            <li>Structured data flows into Obsidian vault with custom database architecture</li>
+                            <li>Knowledge graph visualization shows interconnected nodes for Arduino components (SG90-Micro-Servo, MG996R-Servo, HC-05), 3D printing specs, wiring diagrams, and troubleshooting matrices</li>
+                        </ul>
+
+                        <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 8px;">Key Features</h4>
+                        <ul style="font-size: 0.85rem; color: var(--text-secondary); padding-left: 20px; margin-bottom: 16px; line-height: 1.6; list-style-type: disc;">
+                            <li>Automated information sorting and categorization via NotebookLM</li>
+                            <li>Custom MD file templates for consistent data structure</li>
+                            <li>Bidirectional linking between related concepts (Arduino &rarr; Robot Arm &rarr; 3D Printing &rarr; Firmware)</li>
+                            <li>AI agents can query the local knowledge base for context-aware responses</li>
+                            <li>Maintains personal finance journal and technical project documentation in one unified system</li>
+                        </ul>
+
+                        <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 8px;">Use Case</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 16px; line-height: 1.6;">
+                            This workflow allows me to leverage AI agents with my own curated knowledge base, making
+                            research and project planning significantly more efficient. Instead of generic AI responses, I
+                            get outputs tailored to my specific robotic arm build, component choices, and documented
+                            troubleshooting history.
+                            <br><br>
+                            <em>Note: This system is actively used for my ongoing robotic arm project and demonstrates my
+                                ability to integrate multiple AI tools into a cohesive workflow.</em>
+                        </p>
+                    </div>
+                    <button class="read-more-btn">Read More &darr;</button>
+                </div>
+            </div>
+
+            <!-- Project 4: Smart Grid Analysis Simulation -->
+            <div class="project-card fade-in" data-category="software" id="project-smart-grid">
+                <div class="project-image">
+                    <img src="{{ url_for('static', filename='img/smart-grid.png') }}" alt="Smart Grid Command Center" title="Click to enlarge" style="width: 100%; height: 100%; object-fit: cover; object-position: center; cursor: pointer; transition: 0.3s;" onclick="document.getElementById('image-modal').style.display='block'; document.getElementById('image-modal-img').src=this.src;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                    <span class="project-status status-completed"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Complete</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Smart Grid Analysis Simulation</h3>
+                    <p class="project-description">
+                        An analysis simulation for electrical power usage designed to model and optimize energy distribution in smart grids.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Electrical Engineering</span>
+                        <span class="project-tag">Simulation</span>
+                        <span class="project-tag">Power Systems</span>
+                    </div>
+                    <div class="read-more-content">
+                        <p class="project-description">
+                            Currently preparing technical documentation and preview images for this project. The simulation demonstrates principles of modern electrical power management and efficiency analysis.
+                        </p>
+                    </div>
+                    <button class="read-more-btn">Read More &darr;</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}
+
