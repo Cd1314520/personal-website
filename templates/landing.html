@@ -1,0 +1,271 @@
+{% extends "base.html" %}
+
+{% block title %}Chris — Electrical Engineering Student{% endblock %}
+
+{% block extra_head %}
+<!-- Scoped Stylesheet for 3D Landing Page -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+{% endblock %}
+
+{% block content %}
+<!-- Main Wrapper -->
+<div class="landing-wrapper">
+
+  <!-- ==========================================
+       1. HERO SECTION
+       ========================================== -->
+  <section class="hero-section">
+    <!-- Massive Heading -->
+    <div class="hero-heading-container">
+      <h1 class="hero-heading-text hero-heading landing-fade" data-delay="0.15s" data-y="40px">
+        Hi, i&rsquo;m Chris
+      </h1>
+    </div>
+
+    <!-- Centered Portrait (Magnetic Mouse Follow) -->
+    <div class="hero-portrait-container landing-fade" data-delay="0.6s" data-y="30px">
+      <div class="hero-portrait-magnet">
+        <img class="hero-portrait-image"
+             src="https://shrug-person-78902957.figma.site/_components/v2/d24c01ad3a56fc65e942a1f501eb73db42d7cf9a/Rectangle_40443.81459862.png"
+             alt="Chris Portrait">
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="hero-bottom-bar">
+      <!-- Description -->
+      <div class="landing-fade" data-delay="0.35s" data-y="20px">
+        <p class="hero-description-text">
+          an ee student driven by building robotic arms to ai workflows
+        </p>
+      </div>
+
+      <!-- Action Button -->
+      <div class="landing-fade" data-delay="0.5s" data-y="20px">
+        <a href="/contact" class="btn-contact">
+          Contact Me
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       2. ABOUT SECTION
+       ========================================== -->
+  <section class="about-section" id="about">
+    <!-- Corner Decorative 3D Images -->
+    <img class="about-deco-img about-deco-tl landing-fade" data-delay="0.1s" data-y="0px" data-x="-80px" src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/moon_icon.11395d36.png" alt="Moon 3D">
+    <img class="about-deco-img about-deco-bl landing-fade" data-delay="0.25s" data-y="0px" data-x="-80px" src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/p59_1.4659672e.png" alt="Geometric 3D">
+    <img class="about-deco-img about-deco-tr landing-fade" data-delay="0.15s" data-y="0px" data-x="80px" src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/lego_icon-1.703bb594.png" alt="Lego 3D">
+    <img class="about-deco-img about-deco-br landing-fade" data-delay="0.3s" data-y="0px" data-x="80px" src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/Group_134-1.2e04f3ce.png" alt="Group 3D">
+
+    <!-- Heading -->
+    <h2 class="about-heading hero-heading landing-fade" data-delay="0s" data-y="40px">
+      About me
+    </h2>
+
+    <!-- Scroll Reveal Text -->
+    <div class="about-paragraph-container">
+      <p class="about-text-reveal" id="about-reveal-text">
+        I'm Chris, an Electrical Engineering student at the University of Houston who loves combining hardware, software, and AI. From programming Arduino-powered robotic arms to building AI agent workflows and web apps, I truly enjoy building impactful solutions that stand out. Let's build something incredible together!
+      </p>
+    </div>
+
+    <!-- Contact CTA -->
+    <div class="about-button-container landing-fade" data-delay="0.4s" data-y="20px">
+      <a href="/contact" class="btn-contact">
+        Contact Me
+      </a>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3. STRENGTHS SECTION (replaces Services)
+       ========================================== -->
+  <section class="services-section">
+    <h2 class="services-heading">
+      What I Bring
+    </h2>
+
+    <div class="services-list">
+      <!-- Item 01 -->
+      <div class="services-item landing-fade" data-delay="0s" data-y="20px">
+        <div class="services-number">01</div>
+        <div class="services-content">
+          <h3 class="services-name">Electrical Engineering &amp; AI</h3>
+          <p class="services-desc">Pursuing a B.S. in Electrical Engineering at the University of Houston with a strong foundation in math, physics, and engineering from Lone Star College (3.5 GPA). Passionate about the intersection of power systems, embedded systems, and artificial intelligence.</p>
+        </div>
+      </div>
+
+      <!-- Item 02 -->
+      <div class="services-item landing-fade" data-delay="0.1s" data-y="20px">
+        <div class="services-number">02</div>
+        <div class="services-content">
+          <h3 class="services-name">Hands-On Hardware</h3>
+          <p class="services-desc">Experienced with Arduino, Raspberry Pi Pico, circuit design, and 3D printing (Fusion CAD). Currently building a programmable robotic arm with 360-degree movement and app-based control — combining mechanical design, firmware, and software into one working system.</p>
+        </div>
+      </div>
+
+      <!-- Item 03 -->
+      <div class="services-item landing-fade" data-delay="0.2s" data-y="20px">
+        <div class="services-number">03</div>
+        <div class="services-content">
+          <h3 class="services-name">AI Workflow Design</h3>
+          <p class="services-desc">Built custom AI agent workflows that connect Claude Code, Gemini CLI, and Antigravity to a local Obsidian knowledge base. Designed structured Markdown schemas that let AI agents produce context-aware, project-specific outputs instead of generic responses.</p>
+        </div>
+      </div>
+
+      <!-- Item 04 -->
+      <div class="services-item landing-fade" data-delay="0.3s" data-y="20px">
+        <div class="services-number">04</div>
+        <div class="services-content">
+          <h3 class="services-name">Full-Stack Web Development</h3>
+          <p class="services-desc">Built and deployed this portfolio using Flask, HTML/CSS, and JavaScript on Vercel. Comfortable with GitHub version control, API integration, and Python scripting. Always learning new frameworks and tools to ship polished products fast.</p>
+        </div>
+      </div>
+
+      <!-- Item 05 -->
+      <div class="services-item landing-fade" data-delay="0.4s" data-y="20px">
+        <div class="services-number">05</div>
+        <div class="services-content">
+          <h3 class="services-name">Certified &amp; Always Learning</h3>
+          <p class="services-desc">Certified in Financial Markets (Yale), Google AI for App Building (Google), and AI Fluency: Frameworks &amp; Foundation (Anthropic). Driven by curiosity and a belief that the most impactful solutions live at the intersection of engineering and AI.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       4. PROJECTS SECTION (real portfolio)
+       ========================================== -->
+  <section class="projects-section" id="projects">
+    <!-- Project Heading -->
+    <h2 class="projects-heading about-heading hero-heading landing-fade" data-delay="0s" data-y="40px">
+      Projects
+    </h2>
+
+    <div class="projects-stack-container">
+
+      <!-- Project Card 01: Robotic Arm -->
+      <div class="project-card-wrapper">
+        <div class="project-card-sticky">
+          <div class="project-card-top">
+            <div class="project-card-num-title">
+              <span class="project-card-num">01</span>
+              <div class="project-card-details">
+                <span class="project-card-cat">Hardware</span>
+                <span class="project-card-name">Robotic Arm</span>
+              </div>
+            </div>
+            <span class="btn-live-project">In Progress</span>
+          </div>
+          <div class="project-card-single-info">
+            <p class="project-card-desc">A programmable robotic arm built with Arduino and Python, featuring 3D-printed components, 360-degree movement capabilities, and app-based control. Combines embedded systems, mechanical design, and software into one working platform.</p>
+            <div class="project-card-tags">
+              <span class="project-card-tag">Arduino</span>
+              <span class="project-card-tag">Python</span>
+              <span class="project-card-tag">3D Printing</span>
+              <span class="project-card-tag">CAD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card 02: Obsidian AI Workflow -->
+      <div class="project-card-wrapper">
+        <div class="project-card-sticky">
+          <div class="project-card-top">
+            <div class="project-card-num-title">
+              <span class="project-card-num">02</span>
+              <div class="project-card-details">
+                <span class="project-card-cat">Software</span>
+                <span class="project-card-name">Obsidian AI Workflow</span>
+              </div>
+            </div>
+            <span class="btn-live-project">Complete</span>
+          </div>
+          <div class="project-card-grid">
+            <div class="project-grid-col-full">
+              <img class="project-img-featured" src="{{ url_for('static', filename='img/obsidian-graph.png') }}" alt="Obsidian Knowledge Graph" loading="lazy">
+            </div>
+          </div>
+          <div class="project-card-single-info">
+            <p class="project-card-desc">Built a custom AI-powered knowledge management system connecting Gemini CLI, Claude Code, and NotebookLM to a local Obsidian vault. Features bidirectional linking, structured Markdown schemas, and context-aware AI outputs.</p>
+            <div class="project-card-tags">
+              <span class="project-card-tag">Gemini CLI</span>
+              <span class="project-card-tag">Obsidian</span>
+              <span class="project-card-tag">NotebookLM</span>
+              <span class="project-card-tag">Markdown</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card 03: Smart Grid Simulation -->
+      <div class="project-card-wrapper">
+        <div class="project-card-sticky">
+          <div class="project-card-top">
+            <div class="project-card-num-title">
+              <span class="project-card-num">03</span>
+              <div class="project-card-details">
+                <span class="project-card-cat">Software</span>
+                <span class="project-card-name">Smart Grid Simulation</span>
+              </div>
+            </div>
+            <span class="btn-live-project">Complete</span>
+          </div>
+          <div class="project-card-grid">
+            <div class="project-grid-col-full">
+              <img class="project-img-featured" src="{{ url_for('static', filename='img/smart-grid.png') }}" alt="Smart Grid Command Center" loading="lazy">
+            </div>
+          </div>
+          <div class="project-card-single-info">
+            <p class="project-card-desc">An analysis simulation for electrical power usage designed to model and optimize energy distribution in smart grids. Demonstrates principles of modern electrical power management and efficiency analysis.</p>
+            <div class="project-card-tags">
+              <span class="project-card-tag">Electrical Engineering</span>
+              <span class="project-card-tag">Simulation</span>
+              <span class="project-card-tag">Power Systems</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card 04: Personal Portfolio -->
+      <div class="project-card-wrapper">
+        <div class="project-card-sticky">
+          <div class="project-card-top">
+            <div class="project-card-num-title">
+              <span class="project-card-num">04</span>
+              <div class="project-card-details">
+                <span class="project-card-cat">Web</span>
+                <span class="project-card-name">Portfolio Website</span>
+              </div>
+            </div>
+            <a href="/" class="btn-live-project">Live</a>
+          </div>
+          <div class="project-card-single-info">
+            <p class="project-card-desc">This website! A custom-built portfolio using Flask as the backend, deployed on Vercel as a serverless application. Features a responsive dark theme with modern CSS animations, glassmorphic design elements, and an interactive contact form.</p>
+            <div class="project-card-tags">
+              <span class="project-card-tag">Flask</span>
+              <span class="project-card-tag">Vercel</span>
+              <span class="project-card-tag">HTML/CSS</span>
+              <span class="project-card-tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<!-- Apply scoped body class to body elements -->
+<script>
+  document.body.classList.add('landing-body');
+</script>
+<!-- Scoped Interactivity Script for 3D Landing Page -->
+<script src="{{ url_for('static', filename='js/landing.js') }}"></script>
+{% endblock %}

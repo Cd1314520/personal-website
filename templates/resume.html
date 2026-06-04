@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+
+{% block title %}Resume | Qizan Dong (Chris){% endblock %}
+
+{% block content %}
+<section class="section" id="resume">
+    <div class="container">
+
+        <!-- Section Header -->
+        <div class="section-header fade-in">
+            <span class="section-label">// Resume</span>
+            <h1 class="section-title">My <span class="gradient-text">Resume</span></h1>
+            <p class="section-subtitle">Education, experience, skills, and certifications at a glance.</p>
+        </div>
+
+        <!-- Download Area -->
+        <div class="resume-download-area fade-in">
+            <a href="{{ url_for('static', filename='resume/Qizan_Dong_Resume.pdf') }}" download class="btn btn-primary" id="resume-download-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download PDF
+            </a>
+            <a href="/contact" class="btn btn-secondary" id="resume-contact-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Contact Me
+            </a>
+        </div>
+
+        <!-- Resume Content Grid -->
+        <div class="resume-grid fade-in">
+
+            <!-- Left Column -->
+            <div>
+                <!-- Education -->
+                <h3 class="resume-section-title">Education</h3>
+
+                <div class="resume-card">
+                    <div class="resume-card-header">
+                        <h4>B.S. Electrical Engineering</h4>
+                        <span class="resume-card-date">Expected May 2028</span>
+                    </div>
+                    <div class="resume-card-org">University of Houston, Houston, TX</div>
+                    <p>Pursuing a Bachelor of Science in Electrical Engineering with interests in
+                       power systems, embedded systems, and AI integration.</p>
+                </div>
+
+                <div class="resume-card">
+                    <div class="resume-card-header">
+                        <h4>Associate of Science</h4>
+                        <span class="resume-card-date">Graduated May 2026</span>
+                    </div>
+                    <div class="resume-card-org">Lone Star College-yFair, Cypress, TX</div>
+                    <p>GPA: 3.5  &mdash; Completed foundational coursework in engineering, mathematics, and physics.
+                       Member of ASME Club and EMPOWER program.</p>
+                </div>
+
+                <!-- Work Experience -->
+                <h3 class="resume-section-title" style="margin-top: 40px;">Work Experience</h3>
+
+                <div class="resume-card">
+                    <div class="resume-card-header">
+                        <h4>Pharmacy Technician</h4>
+                        <span class="resume-card-date">Jun 2025  &mdash; Apr 2026</span>
+                    </div>
+                    <div class="resume-card-org">Walmart, Cypress, TX</div>
+                    <ul>
+                        <li>Maintained accurate prescription processing while handling sensitive patient data in a high-volume pharmacy environment</li>
+                        <li>Communicated insurance and medication information clearly to patients while coordinating with pharmacists</li>
+                        <li>Managed medication inventory and stock replenishment while following HIPAA and safety regulations</li>
+                    </ul>
+                </div>
+
+                <div class="resume-card">
+                    <div class="resume-card-header">
+                        <h4>Sales Representative</h4>
+                        <span class="resume-card-date">Nov 2024  &mdash; May 2025</span>
+                    </div>
+                    <div class="resume-card-org">SimpliSafe, Houston, TX  &mdash; Marketing Department</div>
+                    <ul>
+                        <li>Educated clients on home security technical specs to increase satisfaction and meet sales goals</li>
+                        <li>Developed strong communication and time management skills in a goal-driven team environment</li>
+                        <li>Exceeded monthly sales quotas by up to 15% through proactive lead management and CRM tracking</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div>
+                <!-- Technical Skills -->
+                <h3 class="resume-section-title">Technical Skills</h3>
+
+                <div class="resume-card">
+                    <h4 style="margin-bottom: 16px; font-size: 0.9rem; color: var(--text-secondary);">Programming</h4>
+                    <div class="resume-skills-list">
+                        <span class="resume-skill-tag">Python</span>
+                    </div>
+                </div>
+
+                <div class="resume-card">
+                    <h4 style="margin-bottom: 16px; font-size: 0.9rem; color: var(--text-secondary);">Engineering Software</h4>
+                    <div class="resume-skills-list">
+                        <span class="resume-skill-tag">MATLAB</span>
+                        <span class="resume-skill-tag">CAD (Fusion)</span>
+                    </div>
+                </div>
+
+                <div class="resume-card">
+                    <h4 style="margin-bottom: 16px; font-size: 0.9rem; color: var(--text-secondary);">AI Tools</h4>
+                    <div class="resume-skills-list">
+                        <span class="resume-skill-tag">Claude Code</span>
+                        <span class="resume-skill-tag">Antigravity</span>
+                        <span class="resume-skill-tag">AI Agents</span>
+                        <span class="resume-skill-tag">Obsidian Integration</span>
+                    </div>
+                </div>
+
+                <div class="resume-card">
+                    <h4 style="margin-bottom: 16px; font-size: 0.9rem; color: var(--text-secondary);">Tools &amp; Platforms</h4>
+                    <div class="resume-skills-list">
+                        <span class="resume-skill-tag">GitHub</span>
+                        <span class="resume-skill-tag">Vercel</span>
+                        <span class="resume-skill-tag">API Integration</span>
+                        <span class="resume-skill-tag">Advanced Excel</span>
+                    </div>
+                </div>
+
+                <div class="resume-card">
+                    <h4 style="margin-bottom: 16px; font-size: 0.9rem; color: var(--text-secondary);">Hardware</h4>
+                    <div class="resume-skills-list">
+                        <span class="resume-skill-tag">Arduino</span>
+                        <span class="resume-skill-tag">Pi Pico</span>
+                        <span class="resume-skill-tag">Circuit Design</span>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <h3 class="resume-section-title" style="margin-top: 40px;">Certifications</h3>
+
+                <div class="resume-card">
+                    <ul>
+                        <li><strong>Financial Markets</strong>  &mdash; Yale University</li>
+                        <li><strong>Google AI for App Building</strong>  &mdash; Google</li>
+                        <li><strong>AI Fluency: Framework &amp; Foundation</strong>  &mdash; Anthropic</li>
+                    </ul>
+                </div>
+
+                <!-- Key Projects -->
+                <h3 class="resume-section-title" style="margin-top: 40px;">Technical Projects</h3>
+
+                <div class="resume-card">
+                    <div class="resume-card-header">
+                        <h4>Robotic Arm</h4>
+                        <span class="resume-card-date">In Progress</span>
+                    </div>
+                    <ul>
+                        <li>Building a robotic arm with Arduino and 3D-printed components</li>
+                        <li>Features 360-degree movement and app-based control</li>
+                        <li>Integrating Python for high-level coordination</li>
+                    </ul>
+                </div>
+
+                <div class="resume-card">
+                    <div class="resume-card-header">
+                        <h4>Obsidian AI Workflow</h4>
+                        <span class="resume-card-date">Complete</span>
+                    </div>
+                    <ul>
+                        <li>Designed custom AI agent workflow connected to local Obsidian</li>
+                        <li>Built a personal database for context-aware AI output</li>
+                        <li>Uses structured Markdown files for project management</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}
