@@ -83,6 +83,10 @@
 
     <!-- JavaScript -->
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+    <!-- Vercel Speed Insights -->
+    <script type="module" src="{{ url_for('static', filename='js/speed-insights-init.js') }}"></script>
+    
     {% block extra_scripts %}{% endblock %}
 </body>
 </html>
