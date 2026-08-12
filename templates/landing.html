@@ -184,6 +184,11 @@
             </div>
             <span class="btn-live-project">Active</span>
           </div>
+          <div class="project-card-grid">
+            <div class="project-grid-col-full">
+              <img class="project-img-featured" src="{{ url_for('static', filename='img/trading-positions.png') }}" alt="TradingAgents paper account positions" loading="lazy">
+            </div>
+          </div>
           <div class="project-card-single-info">
             <p class="project-card-desc">A multi-model LLM system that researches equities and proposes trades on a paper (simulated) account only &mdash; no real money. Built around risk gates that blocked three premature sells in production, plus provider failover and unattended scheduled runs.</p>
             <div class="project-card-tags">
@@ -280,12 +285,42 @@
         </div>
       </div>
 
-      <!-- Project Card 06: Personal Portfolio -->
+      <!-- Project Card 06: INA226 Energy Monitor Board -->
       <div class="project-card-wrapper">
         <div class="project-card-sticky">
           <div class="project-card-top">
             <div class="project-card-num-title">
               <span class="project-card-num">06</span>
+              <div class="project-card-details">
+                <span class="project-card-cat">Hardware</span>
+                <span class="project-card-name">INA226 Energy Monitor Board</span>
+              </div>
+            </div>
+            <span class="btn-live-project">Design Complete</span>
+          </div>
+          <div class="project-card-grid">
+            <div class="project-grid-col-full">
+              <img class="project-img-featured" src="{{ url_for('static', filename='img/pcb-board.png') }}" alt="KiCad PCB layout of the INA226 energy monitor board" loading="lazy">
+            </div>
+          </div>
+          <div class="project-card-single-info">
+            <p class="project-card-desc">A custom PCB designed in KiCad around the INA226 power monitor &mdash; measuring voltage, current, and power on a load and reporting over I&sup2;C to a microcontroller, with screw-terminal input/load and a 3.3&nbsp;V / I&sup2;C breakout header.</p>
+            <div class="project-card-tags">
+              <span class="project-card-tag">KiCad</span>
+              <span class="project-card-tag">PCB Design</span>
+              <span class="project-card-tag">INA226</span>
+              <span class="project-card-tag">I&sup2;C</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card 07: Personal Portfolio -->
+      <div class="project-card-wrapper">
+        <div class="project-card-sticky">
+          <div class="project-card-top">
+            <div class="project-card-num-title">
+              <span class="project-card-num">07</span>
               <div class="project-card-details">
                 <span class="project-card-cat">Web</span>
                 <span class="project-card-name">Portfolio Website</span>
