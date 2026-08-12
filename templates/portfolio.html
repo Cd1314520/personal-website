@@ -24,6 +24,89 @@
         <!-- Projects Grid -->
         <div class="portfolio-grid">
 
+            <!-- Project: ANSYS PCB FEA Pipeline -->
+            <div class="project-card fade-in" data-category="software" id="project-ansys-fea">
+                <div class="project-image">
+                    <div class="project-image-placeholder">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <path d="M3 9h18M9 3v18M15 3v18M3 15h18" />
+                        </svg>
+                        <span>Project Image Coming Soon</span>
+                    </div>
+                    <span class="project-status status-in-progress"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>Active Research</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Parametric PCB Thermal&ndash;Stress Simulation Pipeline</h3>
+                    <p class="project-description">
+                        A headless PyMAPDL pipeline that procedurally generates printed circuit boards and solves
+                        coupled thermal&ndash;stress FEA end to end, built toward a large simulation dataset for
+                        machine learning. Research work with a University of Houston professor.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">ANSYS / PyMAPDL</span>
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">FEA</span>
+                        <span class="project-tag">Automation</span>
+                        <span class="project-tag">ML Dataset</span>
+                    </div>
+                    <div class="read-more-content">
+                        <h4 style="font-size: 0.95rem; font-weight: 600; margin-top: 16px; margin-bottom: 8px;">Pipeline</h4>
+                        <ul style="font-size: 0.85rem; color: var(--text-secondary); padding-left: 20px; margin-bottom: 16px; line-height: 1.6; list-style-type: disc;">
+                            <li>Procedurally places ICs and maze-routes copper traces (90&deg; turns, shortest path, clearance constraints, no crossings), then meshes, solves, and exports results</li>
+                            <li>Applies a coupled thermal load and mechanical load with fixed support, solving a ~113k-node model for von-Mises stress</li>
+                            <li>Fully seeded and resumable: reproducible runs that log failures and skip already-finished boards</li>
+                            <li>Runs on both a local machine and a UH lab workstation; guards the student-license core and node caps</li>
+                        </ul>
+                        <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 8px;">Goal</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 16px; line-height: 1.6;">
+                            Produce a large, consistent dataset of solved boards to train ML models that predict
+                            thermal&ndash;mechanical behavior directly from a layout, skipping the full solve.
+                        </p>
+                    </div>
+                    <button class="read-more-btn">Read More &darr;</button>
+                </div>
+            </div>
+
+            <!-- Project: TradingAgents -->
+            <div class="project-card fade-in" data-category="software" id="project-trading-agents">
+                <div class="project-image">
+                    <img src="{{ url_for('static', filename='img/trading-positions.png') }}" alt="TradingAgents paper account positions" title="Click to enlarge" style="width: 100%; height: 100%; object-fit: cover; object-position: top; cursor: pointer; transition: 0.3s;" onclick="document.getElementById('image-modal').style.display='block'; document.getElementById('image-modal-img').src=this.src;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                    <span class="project-status status-in-progress"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>Active</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">TradingAgents &mdash; Automated Equity Analysis</h3>
+                    <p class="project-description">
+                        A multi-model LLM system that researches equities and proposes trades, wired to a
+                        <strong>paper (simulated) brokerage account only &mdash; no real money</strong>. Built around
+                        risk gates that block premature and unsafe orders.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">LLM Agents</span>
+                        <span class="project-tag">OpenRouter</span>
+                        <span class="project-tag">Risk Gating</span>
+                        <span class="project-tag">Paper Trading</span>
+                    </div>
+                    <div class="read-more-content">
+                        <h4 style="font-size: 0.95rem; font-weight: 600; margin-top: 16px; margin-bottom: 8px;">Risk gates</h4>
+                        <ul style="font-size: 0.85rem; color: var(--text-secondary); padding-left: 20px; margin-bottom: 16px; line-height: 1.6; list-style-type: disc;">
+                            <li><strong>Two-day sell confirmation</strong> &mdash; a Sell must repeat the next day before it liquidates, which caught three premature sells in production</li>
+                            <li><strong>Volatility gate</strong> &mdash; no new positions are opened on high-volatility (VIX) days</li>
+                            <li><strong>Truncated-analysis gate</strong> &mdash; a report cut off by the model's token limit is blocked from placing new buys, and the gate fails closed</li>
+                        </ul>
+                        <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 8px;">Architecture</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 16px; line-height: 1.6;">
+                            Multiple LLM providers with automatic failover and checkpoint resume, running unattended on
+                            a schedule with outbound alerts. Strictly a paper account &mdash; this is a research and
+                            engineering project, not investment advice, and no real funds are ever traded.
+                        </p>
+                    </div>
+                    <button class="read-more-btn">Read More &darr;</button>
+                </div>
+            </div>
+
             <!-- Project 1: Robotic Arm -->
             <div class="project-card fade-in" data-category="hardware" id="project-robotic-arm">
                 <div class="project-image">
@@ -36,22 +119,64 @@
                         </svg>
                         <span>Project Image Coming Soon</span>
                     </div>
-                    <span class="project-status status-in-progress"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>In Progress</span>
+                    <span class="project-status status-completed"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Built &amp; Working</span>
                 </div>
                 <div class="project-info">
-                    <h3 class="project-title">Robotic Arm</h3>
+                    <h3 class="project-title">6-DOF Robotic Arm</h3>
                     <p class="project-description">
-                        A programmable robotic arm built with Arduino and Python, featuring 3D-printed components,
-                        360-degree movement capabilities, and app-based control.
+                        A 6-degree-of-freedom robotic arm driven by an Arduino UNO and a PCA9685 16-channel PWM
+                        controller, teleoperated in real time from a PS5 DualSense controller.
                     </p>
                     <div class="project-tags">
                         <span class="project-tag">Arduino</span>
                         <span class="project-tag">Python</span>
+                        <span class="project-tag">PCA9685 / I&sup2;C</span>
+                        <span class="project-tag">pygame</span>
                         <span class="project-tag">3D Printing</span>
-                        <span class="project-tag">CAD</span>
                     </div>
                     <div class="read-more-content">
-                        <p class="project-description">Combining embedded systems, mechanical design, and software to create a fully functional robotic platform.</p>
+                        <h4 style="font-size: 0.95rem; font-weight: 600; margin-top: 16px; margin-bottom: 8px;">Build</h4>
+                        <ul style="font-size: 0.85rem; color: var(--text-secondary); padding-left: 20px; margin-bottom: 16px; line-height: 1.6; list-style-type: disc;">
+                            <li>Six servos on a PCA9685 PWM driver (I&sup2;C, addr 0x40): 3&times; MG996R for base/shoulder/elbow, 3&times; MG90S for wrist and gripper</li>
+                            <li>Dedicated external 5&nbsp;V supply into the driver V+ rail, separate from the Arduino logic power</li>
+                            <li>Per-channel soft limits enforced in both the Python control layer and the firmware</li>
+                        </ul>
+                        <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 8px;">Control &amp; debugging</h4>
+                        <ul style="font-size: 0.85rem; color: var(--text-secondary); padding-left: 20px; margin-bottom: 16px; line-height: 1.6; list-style-type: disc;">
+                            <li>PC-in-the-loop: <code>pygame</code> reads the DualSense, <code>pyserial</code> streams <code>"&lt;channel&gt; &lt;angle&gt;"</code> at 115200 baud, Arduino parses and drives the PWM</li>
+                            <li>Real bring-up work: traced a dead I&sup2;C link to an A4/A5 miswiring, diagnosed servo stalls stripping gears, and caught a continuous-rotation servo mis-buy before swapping to angle-holding MG90S units</li>
+                        </ul>
+                    </div>
+                    <button class="read-more-btn">Read More &darr;</button>
+                </div>
+            </div>
+
+            <!-- Project: INA226 Energy Monitor Board -->
+            <div class="project-card fade-in" data-category="hardware" id="project-energy-monitor">
+                <div class="project-image">
+                    <img src="{{ url_for('static', filename='img/pcb-board.png') }}" alt="KiCad PCB layout of the INA226 energy monitor board" title="Click to enlarge" style="width: 100%; height: 100%; object-fit: cover; object-position: center; cursor: pointer; transition: 0.3s;" onclick="document.getElementById('image-modal').style.display='block'; document.getElementById('image-modal-img').src=this.src;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                    <span class="project-status status-completed"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Design Complete</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">INA226 Energy Monitor Board</h3>
+                    <p class="project-description">
+                        A custom PCB designed in KiCad around the INA226 power monitor: it measures voltage, current,
+                        and power on a load and reports the readings over I&sup2;C to a microcontroller.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">KiCad</span>
+                        <span class="project-tag">PCB Design</span>
+                        <span class="project-tag">INA226</span>
+                        <span class="project-tag">I&sup2;C</span>
+                        <span class="project-tag">Power Monitoring</span>
+                    </div>
+                    <div class="read-more-content">
+                        <p class="project-description">
+                            Full schematic-to-layout design: INA226 current/power sense front end with a shunt across
+                            screw-terminal input and load, plus a 4-pin header breaking out 3.3&nbsp;V, ground, and the
+                            I&sup2;C bus for a host microcontroller. Routed as a single-board layout in KiCad with a
+                            ground pour and edge cuts.
+                        </p>
                     </div>
                     <button class="read-more-btn">Read More &darr;</button>
                 </div>
@@ -60,14 +185,39 @@
             <!-- Project 2: Personal Portfolio Website -->
             <div class="project-card fade-in" data-category="web" id="project-portfolio">
                 <div class="project-image">
-                    <div class="project-image-placeholder">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="16 18 22 12 16 6" />
-                            <polyline points="8 6 2 12 8 18" />
-                        </svg>
-                        <span>Project Image Coming Soon</span>
-                    </div>
+                    <svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Preview of this portfolio website">
+                        <defs>
+                            <linearGradient id="pf-bg" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0" stop-color="#12121a"/><stop offset="1" stop-color="#1b1226"/>
+                            </linearGradient>
+                            <linearGradient id="pf-accent" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#22d3ee"/>
+                            </linearGradient>
+                        </defs>
+                        <rect width="400" height="240" fill="url(#pf-bg)"/>
+                        <!-- browser chrome -->
+                        <rect x="0" y="0" width="400" height="30" fill="#0d0d14"/>
+                        <circle cx="16" cy="15" r="4" fill="#ff5f57"/><circle cx="30" cy="15" r="4" fill="#febc2e"/><circle cx="44" cy="15" r="4" fill="#28c840"/>
+                        <rect x="70" y="8" width="260" height="15" rx="7" fill="#22222e"/>
+                        <text x="82" y="19" font-family="monospace" font-size="9" fill="#8a8a9a">chrisdong.dev / portfolio</text>
+                        <!-- hero -->
+                        <text x="28" y="90" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Hi, I'm Chris</text>
+                        <rect x="28" y="102" width="150" height="4" rx="2" fill="url(#pf-accent)"/>
+                        <text x="28" y="128" font-family="Arial, sans-serif" font-size="11" fill="#9a9aad">EE · hardware · AI systems</text>
+                        <!-- project tiles -->
+                        <rect x="28" y="150" width="106" height="66" rx="8" fill="#20202c"/>
+                        <rect x="147" y="150" width="106" height="66" rx="8" fill="#20202c"/>
+                        <rect x="266" y="150" width="106" height="66" rx="8" fill="#20202c"/>
+                        <rect x="40" y="164" width="46" height="6" rx="3" fill="url(#pf-accent)"/>
+                        <rect x="159" y="164" width="46" height="6" rx="3" fill="url(#pf-accent)"/>
+                        <rect x="278" y="164" width="46" height="6" rx="3" fill="url(#pf-accent)"/>
+                        <rect x="40" y="180" width="80" height="4" rx="2" fill="#3a3a48"/>
+                        <rect x="40" y="190" width="66" height="4" rx="2" fill="#3a3a48"/>
+                        <rect x="159" y="180" width="80" height="4" rx="2" fill="#3a3a48"/>
+                        <rect x="159" y="190" width="66" height="4" rx="2" fill="#3a3a48"/>
+                        <rect x="278" y="180" width="80" height="4" rx="2" fill="#3a3a48"/>
+                        <rect x="278" y="190" width="66" height="4" rx="2" fill="#3a3a48"/>
+                    </svg>
                     <span class="project-status status-live"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Live</span>
                 </div>
                 <div class="project-info">
@@ -95,48 +245,40 @@
                     <span class="project-status status-completed"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Complete</span>
                 </div>
                 <div class="project-info">
-                    <h3 class="project-title">Obsidian AI Workflow &amp; Knowledge Management System</h3>
+                    <h3 class="project-title">Personal AI Automation &amp; Knowledge System</h3>
                     <p class="project-description">
-                        Built a custom AI-powered knowledge management system that connects multiple AI agents to my
-                        local Obsidian vault for enhanced research and project organization.
+                        A personal automation system built on scheduled AI agents wired into my local Obsidian vault,
+                        handling email triage, a job and scholarship pipeline, and automatic knowledge capture.
                     </p>
 
                     <div class="project-tags">
-                        <span class="project-tag">Gemini CLI</span>
+                        <span class="project-tag">Claude Code</span>
                         <span class="project-tag">Obsidian</span>
-                        <span class="project-tag">NotebookLM</span>
+                        <span class="project-tag">Scheduled Agents</span>
+                        <span class="project-tag">Python</span>
                         <span class="project-tag">Markdown</span>
-                        <span class="project-tag">Custom DB Schema</span>
                     </div>
 
                     <div class="read-more-content">
-                        <h4 style="font-size: 0.95rem; font-weight: 600; margin-top: 16px; margin-bottom: 8px;">Workflow Architecture</h4>
+                        <h4 style="font-size: 0.95rem; font-weight: 600; margin-top: 16px; margin-bottom: 8px;">Scheduled Agents</h4>
                         <ul style="font-size: 0.85rem; color: var(--text-secondary); padding-left: 20px; margin-bottom: 16px; line-height: 1.6; list-style-type: disc;">
-                            <li>Terminal connects to Gemini CLI for direct AI agent interaction</li>
-                            <li>Local Markdown files organized around my robotic arm project, finance journaling, and technical research</li>
-                            <li>NotebookLM processes and structures information from various sources (research papers, guides, component specs)</li>
-                            <li>Structured data flows into Obsidian vault with custom database architecture</li>
-                            <li>Knowledge graph visualization shows interconnected nodes for Arduino components (SG90-Micro-Servo, MG996R-Servo, HC-05), 3D printing specs, wiring diagrams, and troubleshooting matrices</li>
+                            <li>Seven recurring tasks: a daily email digest, a morning brief, daily post drafts, a scheduled trading-agent check, a weekly job &amp; scholarship pipeline, a weekly life summary, and a monthly portfolio sync</li>
+                            <li>The weekly summary agent maintains a living context file that every other agent reads before acting, keeping outputs grounded in current project state</li>
+                            <li>Structured CSV data backs the job, outreach, and scholarship pipelines</li>
                         </ul>
 
-                        <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 8px;">Key Features</h4>
+                        <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 8px;">Knowledge Capture</h4>
                         <ul style="font-size: 0.85rem; color: var(--text-secondary); padding-left: 20px; margin-bottom: 16px; line-height: 1.6; list-style-type: disc;">
-                            <li>Automated information sorting and categorization via NotebookLM</li>
-                            <li>Custom MD file templates for consistent data structure</li>
-                            <li>Bidirectional linking between related concepts (Arduino &rarr; Robot Arm &rarr; 3D Printing &rarr; Firmware)</li>
-                            <li>AI agents can query the local knowledge base for context-aware responses</li>
-                            <li>Maintains personal finance journal and technical project documentation in one unified system</li>
+                            <li>A session-end hook captures every AI coding session into the vault, filed by date so long-running work lands on the right day</li>
+                            <li>Structured Markdown templates and bidirectional links turn scattered notes into a queryable knowledge base</li>
+                            <li>Agents read the curated vault for context-aware output instead of generic responses</li>
                         </ul>
 
                         <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 8px;">Use Case</h4>
                         <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 16px; line-height: 1.6;">
-                            This workflow allows me to leverage AI agents with my own curated knowledge base, making
-                            research and project planning significantly more efficient. Instead of generic AI responses, I
-                            get outputs tailored to my specific robotic arm build, component choices, and documented
-                            troubleshooting history.
-                            <br><br>
-                            <em>Note: This system is actively used for my ongoing robotic arm project and demonstrates my
-                                ability to integrate multiple AI tools into a cohesive workflow.</em>
+                            The system runs the repetitive parts of my week &mdash; triaging mail, drafting outreach,
+                            tracking applications, and logging what I build &mdash; while keeping a single source of
+                            truth that both I and the agents work from.
                         </p>
                     </div>
                     <button class="read-more-btn">Read More &darr;</button>
