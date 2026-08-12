@@ -36,7 +36,7 @@
                 <div class="resume-card">
                     <div class="resume-card-header">
                         <h4>B.S. Electrical Engineering</h4>
-                        <span class="resume-card-date">Expected May 2028</span>
+                        <span class="resume-card-date">Expected May 2029</span>
                     </div>
                     <div class="resume-card-org">University of Houston, Houston, TX</div>
                     <p>Pursuing a Bachelor of Science in Electrical Engineering with interests in
@@ -48,13 +48,24 @@
                         <h4>Associate of Science</h4>
                         <span class="resume-card-date">Graduated May 2026</span>
                     </div>
-                    <div class="resume-card-org">Lone Star College-yFair, Cypress, TX</div>
+                    <div class="resume-card-org">Lone Star College-CyFair, Cypress, TX</div>
                     <p>GPA: 3.5  &mdash; Completed foundational coursework in engineering, mathematics, and physics.
                        Member of ASME Club and EMPOWER program.</p>
                 </div>
 
                 <!-- Work Experience -->
                 <h3 class="resume-section-title" style="margin-top: 40px;">Work Experience</h3>
+
+                <div class="resume-card">
+                    <div class="resume-card-header">
+                        <h4>Independent Contractor</h4>
+                        <span class="resume-card-date">Jun 2026  &mdash; Present</span>
+                    </div>
+                    <div class="resume-card-org">Beim Goods (Startup), Houston, TX</div>
+                    <ul>
+                        <li>Perform QA and product testing for an early-stage startup on a scope-of-work contract basis</li>
+                    </ul>
+                </div>
 
                 <div class="resume-card">
                     <div class="resume-card-header">
@@ -92,12 +103,15 @@
                     <h4 style="margin-bottom: 16px; font-size: 0.9rem; color: var(--text-secondary);">Programming</h4>
                     <div class="resume-skills-list">
                         <span class="resume-skill-tag">Python</span>
+                        <span class="resume-skill-tag">Flask</span>
                     </div>
                 </div>
 
                 <div class="resume-card">
                     <h4 style="margin-bottom: 16px; font-size: 0.9rem; color: var(--text-secondary);">Engineering Software</h4>
                     <div class="resume-skills-list">
+                        <span class="resume-skill-tag">ANSYS / PyMAPDL</span>
+                        <span class="resume-skill-tag">FEA</span>
                         <span class="resume-skill-tag">MATLAB</span>
                         <span class="resume-skill-tag">CAD (Fusion)</span>
                     </div>
@@ -128,6 +142,8 @@
                     <div class="resume-skills-list">
                         <span class="resume-skill-tag">Arduino</span>
                         <span class="resume-skill-tag">Pi Pico</span>
+                        <span class="resume-skill-tag">PCA9685 / I&sup2;C</span>
+                        <span class="resume-skill-tag">Servo Control</span>
                         <span class="resume-skill-tag">Circuit Design</span>
                     </div>
                 </div>
@@ -148,25 +164,49 @@
 
                 <div class="resume-card">
                     <div class="resume-card-header">
-                        <h4>Robotic Arm</h4>
-                        <span class="resume-card-date">In Progress</span>
+                        <h4>PCB Thermal&ndash;Stress FEA Pipeline</h4>
+                        <span class="resume-card-date">Active Research</span>
                     </div>
                     <ul>
-                        <li>Building a robotic arm with Arduino and 3D-printed components</li>
-                        <li>Features 360-degree movement and app-based control</li>
-                        <li>Integrating Python for high-level coordination</li>
+                        <li>Headless PyMAPDL pipeline that generates PCBs and solves coupled thermal&ndash;stress FEA end to end</li>
+                        <li>Reproducible, resumable batch runs toward a large ML training dataset</li>
+                        <li>Research collaboration with a University of Houston professor</li>
                     </ul>
                 </div>
 
                 <div class="resume-card">
                     <div class="resume-card-header">
-                        <h4>Obsidian AI Workflow</h4>
-                        <span class="resume-card-date">Complete</span>
+                        <h4>TradingAgents</h4>
+                        <span class="resume-card-date">Active</span>
                     </div>
                     <ul>
-                        <li>Designed custom AI agent workflow connected to local Obsidian</li>
-                        <li>Built a personal database for context-aware AI output</li>
-                        <li>Uses structured Markdown files for project management</li>
+                        <li>Multi-model LLM system for automated equity analysis on a paper (simulated) account &mdash; no real money</li>
+                        <li>Risk gates that blocked three premature sells in production</li>
+                        <li>Provider failover, checkpoint resume, and unattended scheduled runs</li>
+                    </ul>
+                </div>
+
+                <div class="resume-card">
+                    <div class="resume-card-header">
+                        <h4>6-DOF Robotic Arm</h4>
+                        <span class="resume-card-date">Built &amp; Working</span>
+                    </div>
+                    <ul>
+                        <li>Six servos driven by an Arduino UNO and PCA9685 PWM controller over I&sup2;C</li>
+                        <li>Real-time teleoperation from a PS5 DualSense via pygame and pyserial</li>
+                        <li>Soft limits enforced in both Python and firmware; full I&sup2;C and servo bring-up debugging</li>
+                    </ul>
+                </div>
+
+                <div class="resume-card">
+                    <div class="resume-card-header">
+                        <h4>Personal AI Automation System</h4>
+                        <span class="resume-card-date">Active</span>
+                    </div>
+                    <ul>
+                        <li>Seven scheduled AI agents for email triage, a job pipeline, and knowledge capture</li>
+                        <li>Session-end hook logs every coding session into a structured Obsidian vault</li>
+                        <li>Living context file keeps all agents grounded in current project state</li>
                     </ul>
                 </div>
             </div>
