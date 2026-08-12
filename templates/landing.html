@@ -102,7 +102,7 @@
         <div class="services-number">02</div>
         <div class="services-content">
           <h3 class="services-name">Hands-On Hardware</h3>
-          <p class="services-desc">Experienced with Arduino, Raspberry Pi Pico, circuit design, and 3D printing (Fusion CAD). Currently building a programmable robotic arm with 360-degree movement and app-based control — combining mechanical design, firmware, and software into one working system.</p>
+          <p class="services-desc">Experienced with Arduino, Raspberry Pi Pico, circuit design, and 3D printing (Fusion CAD). Built a working 6-DOF robotic arm driven over I&sup2;C and teleoperated from a PS5 controller — combining mechanical design, firmware, and software into one system, debugged end to end.</p>
         </div>
       </div>
 
@@ -110,8 +110,8 @@
       <div class="services-item landing-fade" data-delay="0.2s" data-y="20px">
         <div class="services-number">03</div>
         <div class="services-content">
-          <h3 class="services-name">AI Workflow Design</h3>
-          <p class="services-desc">Built custom AI agent workflows that connect Claude Code, Gemini CLI, and Antigravity to a local Obsidian knowledge base. Designed structured Markdown schemas that let AI agents produce context-aware, project-specific outputs instead of generic responses.</p>
+          <h3 class="services-name">AI Workflow &amp; Research</h3>
+          <p class="services-desc">Run a seven-agent personal automation system on Claude Code wired into a local Obsidian vault, and build ANSYS PyMAPDL simulation pipelines with a UH professor. I design AI systems that produce context-aware, project-specific output instead of generic responses.</p>
         </div>
       </div>
 
@@ -146,32 +146,32 @@
 
     <div class="projects-stack-container">
 
-      <!-- Project Card 01: Robotic Arm -->
+      <!-- Project Card 01: ANSYS PCB FEA Pipeline -->
       <div class="project-card-wrapper">
         <div class="project-card-sticky">
           <div class="project-card-top">
             <div class="project-card-num-title">
               <span class="project-card-num">01</span>
               <div class="project-card-details">
-                <span class="project-card-cat">Hardware</span>
-                <span class="project-card-name">Robotic Arm</span>
+                <span class="project-card-cat">Software · Research</span>
+                <span class="project-card-name">PCB Thermal&ndash;Stress FEA Pipeline</span>
               </div>
             </div>
-            <span class="btn-live-project">In Progress</span>
+            <span class="btn-live-project">Active Research</span>
           </div>
           <div class="project-card-single-info">
-            <p class="project-card-desc">A programmable robotic arm built with Arduino and Python, featuring 3D-printed components, 360-degree movement capabilities, and app-based control. Combines embedded systems, mechanical design, and software into one working platform.</p>
+            <p class="project-card-desc">A headless PyMAPDL pipeline that procedurally generates PCBs and solves coupled thermal&ndash;stress FEA end to end, built toward a large simulation dataset for machine learning. Research work with a University of Houston professor.</p>
             <div class="project-card-tags">
-              <span class="project-card-tag">Arduino</span>
+              <span class="project-card-tag">ANSYS / PyMAPDL</span>
               <span class="project-card-tag">Python</span>
-              <span class="project-card-tag">3D Printing</span>
-              <span class="project-card-tag">CAD</span>
+              <span class="project-card-tag">FEA</span>
+              <span class="project-card-tag">ML Dataset</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Project Card 02: Obsidian AI Workflow -->
+      <!-- Project Card 02: TradingAgents -->
       <div class="project-card-wrapper">
         <div class="project-card-sticky">
           <div class="project-card-top">
@@ -179,7 +179,57 @@
               <span class="project-card-num">02</span>
               <div class="project-card-details">
                 <span class="project-card-cat">Software</span>
-                <span class="project-card-name">Obsidian AI Workflow</span>
+                <span class="project-card-name">TradingAgents</span>
+              </div>
+            </div>
+            <span class="btn-live-project">Active</span>
+          </div>
+          <div class="project-card-single-info">
+            <p class="project-card-desc">A multi-model LLM system that researches equities and proposes trades on a paper (simulated) account only &mdash; no real money. Built around risk gates that blocked three premature sells in production, plus provider failover and unattended scheduled runs.</p>
+            <div class="project-card-tags">
+              <span class="project-card-tag">LLM Agents</span>
+              <span class="project-card-tag">Python</span>
+              <span class="project-card-tag">Risk Gating</span>
+              <span class="project-card-tag">Paper Trading</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card 03: Robotic Arm -->
+      <div class="project-card-wrapper">
+        <div class="project-card-sticky">
+          <div class="project-card-top">
+            <div class="project-card-num-title">
+              <span class="project-card-num">03</span>
+              <div class="project-card-details">
+                <span class="project-card-cat">Hardware</span>
+                <span class="project-card-name">6-DOF Robotic Arm</span>
+              </div>
+            </div>
+            <span class="btn-live-project">Built &amp; Working</span>
+          </div>
+          <div class="project-card-single-info">
+            <p class="project-card-desc">A 6-degree-of-freedom robotic arm driven by an Arduino UNO and PCA9685 PWM controller over I&sup2;C, teleoperated in real time from a PS5 DualSense via pygame and pyserial. Soft limits enforced in both Python and firmware, with full I&sup2;C and servo bring-up debugging.</p>
+            <div class="project-card-tags">
+              <span class="project-card-tag">Arduino</span>
+              <span class="project-card-tag">Python</span>
+              <span class="project-card-tag">PCA9685 / I&sup2;C</span>
+              <span class="project-card-tag">3D Printing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card 04: Personal AI Automation -->
+      <div class="project-card-wrapper">
+        <div class="project-card-sticky">
+          <div class="project-card-top">
+            <div class="project-card-num-title">
+              <span class="project-card-num">04</span>
+              <div class="project-card-details">
+                <span class="project-card-cat">Software</span>
+                <span class="project-card-name">Personal AI Automation</span>
               </div>
             </div>
             <span class="btn-live-project">Complete</span>
@@ -190,23 +240,23 @@
             </div>
           </div>
           <div class="project-card-single-info">
-            <p class="project-card-desc">Built a custom AI-powered knowledge management system connecting Gemini CLI, Claude Code, and NotebookLM to a local Obsidian vault. Features bidirectional linking, structured Markdown schemas, and context-aware AI outputs.</p>
+            <p class="project-card-desc">A personal automation system built on seven scheduled AI agents wired into a local Obsidian vault &mdash; handling email triage, a job and scholarship pipeline, and automatic session-by-session knowledge capture, all grounded in a living context file.</p>
             <div class="project-card-tags">
-              <span class="project-card-tag">Gemini CLI</span>
+              <span class="project-card-tag">Claude Code</span>
               <span class="project-card-tag">Obsidian</span>
-              <span class="project-card-tag">NotebookLM</span>
-              <span class="project-card-tag">Markdown</span>
+              <span class="project-card-tag">Scheduled Agents</span>
+              <span class="project-card-tag">Python</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Project Card 03: Smart Grid Simulation -->
+      <!-- Project Card 05: Smart Grid Simulation -->
       <div class="project-card-wrapper">
         <div class="project-card-sticky">
           <div class="project-card-top">
             <div class="project-card-num-title">
-              <span class="project-card-num">03</span>
+              <span class="project-card-num">05</span>
               <div class="project-card-details">
                 <span class="project-card-cat">Software</span>
                 <span class="project-card-name">Smart Grid Simulation</span>
@@ -230,12 +280,12 @@
         </div>
       </div>
 
-      <!-- Project Card 04: Personal Portfolio -->
+      <!-- Project Card 06: Personal Portfolio -->
       <div class="project-card-wrapper">
         <div class="project-card-sticky">
           <div class="project-card-top">
             <div class="project-card-num-title">
-              <span class="project-card-num">04</span>
+              <span class="project-card-num">06</span>
               <div class="project-card-details">
                 <span class="project-card-cat">Web</span>
                 <span class="project-card-name">Portfolio Website</span>
